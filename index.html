@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Green Basket – Fresh Groceries</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="logo" href="#">Green Basket</a>
+    <input id="search" type="search" placeholder="Search apples, milk, rice…" aria-label="Search groceries">
+    <button id="cartBtn" class="cart-btn">Cart <span id="cartCount">0</span></button>
+  </header>
+
+  <section class="hero">
+    <h1>Fresh from the field,<br>at your door by evening.</h1>
+    <p>Free delivery on orders above ₹499.</p>
+  </section>
+
+  <nav class="filters" id="filters" aria-label="Categories"></nav>
+
+  <main>
+    <div class="grid" id="grid"></div>
+    <p id="empty" class="empty" hidden>No items match your search. Try another word or category.</p>
+  </main>
+
+  <aside id="drawer" class="drawer" aria-label="Your cart">
+    <div class="drawer-head">
+      <h2>Your cart</h2>
+      <button id="closeCart" aria-label="Close cart">✕</button>
+    </div>
+    <ul id="cartList" class="cart-list"></ul>
+    <div class="drawer-foot">
+      <div class="total"><span>Total</span><strong id="total">₹0</strong></div>
+      <button id="checkout" class="primary">Place order</button>
+    </div>
+  </aside>
+  <div id="overlay" class="overlay"></div>
+  <div id="toast" class="toast" role="status"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
